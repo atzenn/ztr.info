@@ -1,5 +1,5 @@
 # Tài liệu tham khảo cho deploy bằng wrangler (deploy thực tế hiện dùng API trực tiếp).
-name = "ztr-tracker"
+name = "z-tracker"
 main = "worker.js"
 compatibility_date = "2026-11-07"
 workers_dev = true
