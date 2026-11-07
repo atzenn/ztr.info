@@ -1,0 +1,13 @@
+# Tài liệu tham khảo cho deploy bằng wrangler (deploy thực tế hiện dùng API trực tiếp).
+name = "ztr-tracker"
+main = "worker.js"
+compatibility_date = "2026-11-07"
+workers_dev = true
+
+[[durable_objects.bindings]]
+name = "STORE"
+class_name = "TrackerStore"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["TrackerStore"]
