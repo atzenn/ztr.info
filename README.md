@@ -1,4 +1,4 @@
-# ztr.info — 7EN Labs affiliate tracking hub (Rio-style)
+# ztr.info — 7EN Labs affiliate tracking hub
 
 Cloudflare Worker `ztr-tracker` on `ztr.info`: redirect + click log + sub_id
 cho Shopee/Lazada. Mọi link affiliate trên các site của đội đi qua đây.

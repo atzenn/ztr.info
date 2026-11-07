@@ -1,4 +1,4 @@
-// ztr-tracker — 7EN Labs affiliate tracking hub (Rio-style) on ztr.info
+// z-tracker — 7EN Labs affiliate tracking hub on ztr.info
 // Endpoints: /g/<code>, /goto/?url=..., /b (beacon), /admin
 // Storage: single SQLite-backed Durable Object (TrackerStore) — the Cloudflare
 // API token has no KV permission (401 on KV), DO is the available durable
@@ -381,7 +381,7 @@ async function adminDashboard(env) {
   const warn = platforms.some((p) => !p.affiliate_id || p.affiliate_id === "REPLACE_ME")
     ? `<p><b>Cảnh báo:</b> có sàn chưa đặt affiliate_id thật — click vẫn redirect và ghi log, nhưng chưa gắn mã affiliate nên chưa sinh hoa hồng. Đặt affiliate_id ở mục Cài đặt bên dưới.</p>` : "";
   return htmlPage("Admin — ztr.info", `
-    <div class="card"><h1>Admin ztr.info</h1><p>Hub tracking affiliate kiểu Rio: redirect + click + sub_id cho Shopee/Lazada.</p>${warn}</div>
+    <div class="card"><h1>Admin ztr.info</h1><p>Hub tracking affiliate: redirect + click + sub_id cho Shopee/Lazada.</p>${warn}</div>
     <div class="card"><h2>Thống kê 7 ngày gần nhất</h2><table><tr><th>Ngày</th><th>Tổng click</th><th>Bot</th><th>Shopee</th><th>Lazada</th><th>Beacon</th></tr>${dayRows}</table></div>
     <div class="card"><h2>Click gần nhất (20)</h2><table><tr><th>Thời gian</th><th>Loại</th><th>Site</th><th>Sàn</th><th>Bot</th><th>Đích</th></tr>${clickRows}</table></div>
     <div class="card"><h2>Short link</h2><table><tr><th>Mã</th><th>Tiêu đề</th><th>Đích</th><th></th></tr>${linkRows}</table>
@@ -443,7 +443,7 @@ export default {
     }
 
     if (path === "/") {
-      return htmlPage("ztr.info — 7EN Labs affiliate tracking", `<div class="card"><h1>ztr.info</h1><p>Hub tracking affiliate của 7EN Labs (kiểu Rio): redirect + đo click + sub_id cho Shopee và Lazada. Mọi link affiliate trên các site của đội đi qua đây.</p><p><a href="/admin">Trang quản trị</a></p></div>`);
+      return htmlPage("ztr.info — 7EN Labs affiliate tracking", `<div class="card"><h1>ztr.info</h1><p>Hub tracking affiliate của 7EN Labs: redirect + đo click + sub_id cho Shopee và Lazada. Mọi link affiliate trên các site của đội đi qua đây.</p><p><a href="/admin">Trang quản trị</a></p></div>`);
     }
 
     if (path === "/goto" || path === "/goto/") {
